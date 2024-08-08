@@ -1,14 +1,13 @@
 import { useState } from 'react';
-import { Pizza, Gamepad2, Racquet, Code } from 'lucide-react';
 
 const Index = () => {
   const [hoveredSlice, setHoveredSlice] = useState(null);
 
   const pizzaSlices = [
-    { icon: <Pizza className="h-16 w-16" />, title: "Swedish Pizza Lover", description: "Viktor's fuel for coding: Great Swedish pizza!" },
-    { icon: <Racquet className="h-16 w-16" />, title: "Badminton Pro", description: "Smashing shuttlecocks and bugs alike!" },
-    { icon: <Gamepad2 className="h-16 w-16" />, title: "League Legend", description: "Crushing lanes and coding challenges!" },
-    { icon: <Code className="h-16 w-16" />, title: "Coding Champion", description: "Turning caffeine into code since... well, a while ago!" },
+    { icon: "🍕", title: "Swedish Pizza Lover", description: "Viktor's fuel for coding: Great Swedish pizza!" },
+    { icon: "🏸", title: "Badminton Pro", description: "Smashing shuttlecocks and bugs alike!" },
+    { icon: "🎮", title: "League Legend", description: "Crushing lanes and coding challenges!" },
+    { icon: "💻", title: "Coding Champion", description: "Turning caffeine into code since... well, a while ago!" },
   ];
 
   return (
@@ -29,7 +28,7 @@ const Index = () => {
             onMouseEnter={() => setHoveredSlice(index)}
             onMouseLeave={() => setHoveredSlice(null)}
           >
-            {slice.icon}
+            <span className="text-6xl">{slice.icon}</span>
           </div>
         ))}
       </div>
